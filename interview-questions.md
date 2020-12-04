@@ -77,7 +77,9 @@ Your answer:
 
 - Props in react are data that can be accessed through the constructor and this.state by calling this.props.
 
-Researched answer: Props give access to pass data down to nested components, they come from state and is passed onto components.
+Researched answer:
+
+- Props give access to pass data down to nested components, they come from state and is passed onto components.
 
 8. What is `this` in JavaScript?
 
@@ -107,7 +109,7 @@ Your answer:
 
 Researched answer:
 
-- Anonymous function is a function without a name, but not always accessable after initial creation
+- Anonymous function is a function without a name, but not always accessable after initial creation.
 
 ## Looking Ahead: Terms for Next Week
 
@@ -115,12 +117,14 @@ Researched answer:
 
 - Object oriented programming: OOP was created to deal with complex software to deal with how fast applications were growing in complexity. You are able to maintain a better app when working on smaller component/ objects it doesnt effect the main parent code.
 
-- RSpec:Uses red-green-refactoring for test driven development, its composed of multiple libraries, its flexible and customizable.
+- RSpec: Is a computer domain-specific language to test ruby code. Uses red-green-refactoring for test driven development, its composed of multiple libraries, its flexible and customizable.
 
-- Instance variable: Is a type of class atribute.
+- Instance variable: Is a type of class atribute it starts with "@" whose scope refers tonwhatever object it is inside of.
+
 - Ruby blocks: are anonymous functions in Ruby, created with do/end keywords or {}. Its a grouping of statements that are written on the same line as the method calls last parameter.
 
 - Ruby hashes: Is a collection of keys and their value pairs, similar to and array and also can use iterable methods on a hash.
+
 - `getter` and `setter` methods in Ruby: They allow to get the classes instance variable outside the class,`getter` methods are used to `get` the value of an instance variable and binds an object property to a function that can be called upon. While `setter` methods are used to `set` the value of an instance variable and binds an object property to a function to be called when there is an attempt to set the property.
 
 P.S. I utilized Sarah, Brian and my fellow classmates a lot through this, would not have been able to finish the code-challenges.js without their help. I am focusing heavily this week on going through the syllabus and create flash cards for myself to start instilling the fundamentals deeper in my brain. As of now I can see the logic and even talk about it, but when I try and type it out, its a blank wall. very difficult for me. but its all about the push for greatness, and this week will become better!

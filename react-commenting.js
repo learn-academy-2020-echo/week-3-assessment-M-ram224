@@ -7,7 +7,7 @@
 // src/App.js
 
 import React, { Component } from "react"
-// 1) importing the child class component Dice to be used in the render.
+// 1) import Dice from is importing the child class component Dice to the Board component to be used in the parent render.
 import Dice from "./Dice"
 import Log from "./Log"
 
@@ -20,10 +20,10 @@ import dice5 from "../assets/dice-5.png"
 import dice6 from "../assets/dice-6.png"
 
 class Board extends Component {
-  // 2) creates an object to be used in the parent to be called on from the child and creates an ability to use the current instant value of state.
+  // 2) The constructor() block creates an object in the parent to give an ability to use the current instant value of state. establishes initial values of the state when the component mounts.
   constructor(props) {
     super(props)
-    // 3) Initializing the state to be used and declares its value or item.
+    // 3) this.state is initializing the state to be used and declares its value or items.
     this.state = {
       rollImages: [dice1, dice2, dice3, dice4, dice5, dice6],
       currentPic: dice,
@@ -32,23 +32,23 @@ class Board extends Component {
   }
 
   handleRoll = () => {
-    // 4) Destructures this.state to manipulate the values of rollImages and diceLog.
+    // 4) Local variable that destructures this.state to manipulate the values of rollImages and diceLog.
     let { rollImages, diceLog } = this.state
-    // 5) Declaring a variable randomNum to round up to nearest whole number of the length of rollImages.
+    // 5) Declaring a local variable randomNum to round up to nearest whole number rollImages.length between 1 and 6.
     let randomNum = Math.ceil(Math.random() * rollImages.length)
     let newRoll = rollImages[randomNum]
-    // 6) adds a new state of the currentPic to log a new dice roll changing the old state.
+    // 6) this.setState adds a new state of the currentPic to log a new dice roll changing the old state. Uses the spread operator to add the value of dicelog + the newRoll.
     this.setState({ currentPic: newRoll, diceLog: [...diceLog, newRoll] })
   }
 
-  // 7) The render is rendering the react element/ elements into the DOM to display the spcecified HTML elements onto the webpage.
+  // 7) The render is rendering the react element/ elements into the DOM to display the spcecified HTML elements onto the webpage. It re-runs when state is updated using this.setState, also loaded when component is initially called.
   render() {
     const { currentPic, diceLog } = this.state
     return (
       <div id="board-container">
         {/* // 8) Dice is being called to be rendered on the page from its child component. */}
         <Dice
-          // 9) Calles the instance of the function of this.handleRoll to be displayed on the webpage.
+          // 9) roll= Calls the instance of the function of this.handleRoll to be displayed on the webpage. Child component will refer to the method as { this.props.roll }
           roll={this.handleRoll}
           currentPic={currentPic}
         />
@@ -58,5 +58,5 @@ class Board extends Component {
   }
 }
 
-// 10) exports all of the data in our class Board to return to react and update as a component.
+// 10) export default Board, exports all of the data in our class Board to return to react and update as a component.
 export default Board
